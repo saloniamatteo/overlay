@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>salonia</name>
+    <description>Matteo Salonia's Gentoo overlay</description>
+    <homepage>https://github.com/saloniamatteo/overlay</homepage>
+    <source type="git">https://github.com/saloniamatteo/overlay.git</source>
+    <feed>https://github.com/saloniamatteo/overlay/commits/master.atom</feed>
+
+    <owner type="person">
+      <name>Matteo Salonia</name>
+      <email>matteo@salonia.it</email>
+    </owner>
+  </repo>
+</repositories>

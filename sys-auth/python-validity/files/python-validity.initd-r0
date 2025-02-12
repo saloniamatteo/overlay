@@ -1,0 +1,17 @@
+#!/sbin/openrc-run
+# python-validity OpenRC init script
+# Author: Matteo Salonia (@saloniamatteo)
+
+name="python-validity"
+description="validity fingerprint sensor support daemon"
+
+command="/usr/lib/python-validity/dbus-service"
+command_args=""
+command_user="root:root"
+
+pidfile="/var/run/python-validity.pid"
+start_stop_daemon_args="-u root -b -m -p ${pidfile}"
+
+depend() {
+	need open-fprintd
+}

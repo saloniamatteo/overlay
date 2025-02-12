@@ -1,0 +1,17 @@
+#!/sbin/openrc-run
+# open-fprintd OpenRC init script
+# Author: Matteo Salonia (@saloniamatteo)
+
+name="open-fprintd"
+description="open-fprintd daemon"
+
+command="/usr/lib/open-fprintd/open-fprintd"
+command_args=""
+command_user="root:root"
+
+pidfile="/var/run/open-fprintd.pid"
+start_stop_daemon_args="-u root -b -m -p ${pidfile}"
+
+depend() {
+	need dbus
+}
