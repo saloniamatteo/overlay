@@ -11,7 +11,7 @@ Support this project: [salonia.it/donate](https://salonia.it/donate)
 
 Create the `/etc/portage/repos.conf/salonia.conf` file as follows:
 
-```
+```ini
 [salonia]
 priority = 50
 location = /var/db/repos/salonia
@@ -20,17 +20,17 @@ sync-uri = https://github.com/saloniamatteo/overlay.git
 auto-sync = Yes
 ```
 
-Then run `emaint sync -r salonia`, Portage should now find and update the repository.
+Then run `emaint sync -r salonia`. Portage should now find and update the repository.
 
 ### Eselect way
 
-On terminal:
+Run the following command as root:
 
 ```bash
-sudo eselect repository add salonia git https://github.com/saloniamatteo/overlay.git
+eselect repository add salonia git https://github.com/saloniamatteo/overlay
 ```
 
-And then run `emaint sync -r salonia`, Portage should now find and update the repository.
+Then run `emaint sync -r salonia`. Portage should now find and update the repository.
 
 ## Ebuilds
 
